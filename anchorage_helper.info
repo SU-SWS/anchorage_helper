@@ -1,0 +1,3 @@
+name = Anchorage Helper
+description = A set of administrative functions for the Anchorage hosting environment
+core = 7.x

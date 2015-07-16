@@ -1,0 +1,15 @@
+<?php
+/**
+* @file
+* Code for the Anchorage Helper module.
+*/
+
+/**
+ * Implements hook_mail_alter().
+ */
+function anchorage_helper_mail_alter(&$message) {
+  $message['headers']['Reply-To'] = $message['from'];
+  $from = "anchorage-support@lists.stanford.edu";
+  $message['from'] = $from;
+  $message['headers']['From'] = $from;
+}
