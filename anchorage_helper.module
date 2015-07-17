@@ -13,5 +13,7 @@ function anchorage_helper_mail_alter(&$message) {
   $from = "anchorage-support@lists.stanford.edu";
   $message['from'] = $from;
   $message['headers']['From'] = $from;
+  $message['headers']['Sender'] = $from;
+  $message['headers']['Return-Path'] = $from;
   variable_set('anchorage_helper_post', $message);
 }
