@@ -8,12 +8,10 @@
  * Implements hook_mail_alter().
  */
 function anchorage_helper_mail_alter(&$message) {
-  variable_set('anchorage_helper_pre', $message);
   $message['headers']['Reply-To'] = $message['from'];
   $from = "anchorage-support@lists.stanford.edu";
   $message['from'] = $from;
   $message['headers']['From'] = $from;
   $message['headers']['Sender'] = $from;
   $message['headers']['Return-Path'] = $from;
-  variable_set('anchorage_helper_post', $message);
 }
