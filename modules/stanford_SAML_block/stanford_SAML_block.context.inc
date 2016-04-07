@@ -7,14 +7,14 @@
 /**
  * Implements hook_context_default_contexts().
  */
-function stanford_SAML_block_context_default_contexts() {
+function stanford_saml_block_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'stanford-simplesamlphp-login';
-  $context->description = 'SimpleSAMLphp Login Block';
+  $context->description = 'Simplesamlphp Login Block';
   $context->tag = 'Sitewide';
   $context->conditions = array(
     'sitewide' => array(
@@ -40,7 +40,7 @@ function stanford_SAML_block_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Sitewide');
-  t('SimpleSAMLphp Login Block');
+  t('Simplesamlphp Login Block');
   $export['stanford-simplesamlphp-login'] = $context;
 
   return $export;

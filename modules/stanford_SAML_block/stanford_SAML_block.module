@@ -4,4 +4,4 @@
  * Code for the Stanford Jumpstart Login feature.
  */
 
-include_once 'stanford_SAML_block.features.inc';
+include_once 'stanford_saml_block.features.inc';

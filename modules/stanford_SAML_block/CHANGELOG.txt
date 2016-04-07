@@ -1,4 +1,4 @@
-Stanford SAML Block
+Stanford saml Block
 
 Version 7.x-1.0                                                       YYYY-MM-DD
 --------------------------------------------------------------------------------
