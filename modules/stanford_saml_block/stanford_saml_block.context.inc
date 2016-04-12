@@ -13,7 +13,7 @@ function stanford_saml_block_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'stanford-simplesamlphp-login';
+  $context->name = 'stanford_simplesamlphp_login';
   $context->description = 'Simplesamlphp Login Block';
   $context->tag = 'Sitewide';
   $context->conditions = array(
@@ -41,7 +41,7 @@ function stanford_saml_block_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Sitewide');
   t('Simplesamlphp Login Block');
-  $export['stanford-simplesamlphp-login'] = $context;
+  $export['stanford_simplesamlphp_login'] = $context;
 
   return $export;
 }
