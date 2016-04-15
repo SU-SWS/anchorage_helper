@@ -1,5 +1,5 @@
 #[Anchorage Helper](https://github.com/SU-SWS/anchorage_helper)
-##### Version: 7.x-1.0
+##### Version: 7.x-1.x
 
 Maintainer: [jbickar](https://github.com/jbickar)
 
