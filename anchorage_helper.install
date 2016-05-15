@@ -8,7 +8,22 @@
  * Implements hook_install().
  */
 function anchorage_helper_install() {
-  variable_set('smtp_from', 'anchorage-support@lists.stanford.edu');
-  variable_set('smtp_host', 'email-smtp.us-west-2.amazonaws.com');
-  variable_set('smtp_protocol', 'tls');
+  // @FIXME
+// // @FIXME
+// // This looks like another module's variable. You'll need to rewrite this call
+// // to ensure that it uses the correct configuration object.
+// variable_set('smtp_from', 'anchorage-support@lists.stanford.edu');
+
+  // @FIXME
+// // @FIXME
+// // This looks like another module's variable. You'll need to rewrite this call
+// // to ensure that it uses the correct configuration object.
+// variable_set('smtp_host', 'email-smtp.us-west-2.amazonaws.com');
+
+  // @FIXME
+// // @FIXME
+// // This looks like another module's variable. You'll need to rewrite this call
+// // to ensure that it uses the correct configuration object.
+// variable_set('smtp_protocol', 'tls');
+
 }

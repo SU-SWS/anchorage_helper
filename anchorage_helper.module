@@ -8,17 +8,17 @@
  * Implements hook_mail_alter().
  */
 function anchorage_helper_mail_alter(&$message) {
-  $debug = variable_get('anchorage_helper_debug', FALSE);
+  $debug = \Drupal::config('anchorage_helper.settings')->get('anchorage_helper_debug');
   if ($debug) {
-    variable_set('anchorage_helper_pre', $message);
+    \Drupal::configFactory()->getEditable('anchorage_helper.settings')->set('anchorage_helper_pre', $message)->save();
   }
   $message['headers']['Reply-To'] = $message['from'];
-  $from = variable_get('anchorage_helper_ses_from', "anchorage-support@lists.stanford.edu");
+  $from = \Drupal::config('anchorage_helper.settings')->get('anchorage_helper_ses_from');
   $message['from'] = $from;
   $message['headers']['From'] = $from;
   $message['headers']['Sender'] = $from;
   $message['headers']['Return-Path'] = $from;
   if ($debug) {
-    variable_set('anchorage_helper_post', $message);
+    \Drupal::configFactory()->getEditable('anchorage_helper.settings')->set('anchorage_helper_post', $message)->save();
   }
 }

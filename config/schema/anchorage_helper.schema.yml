@@ -1,0 +1,8 @@
+anchorage_helper.settings:
+  type: mapping
+  label: Settings
+  mapping:
+    anchorage_helper_debug:
+      type: boolean
+    anchorage_helper_ses_from:
+      type: string
