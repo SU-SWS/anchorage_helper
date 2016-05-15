@@ -21,11 +21,14 @@ function stanford_saml_block_form_user_login_alter(&$form, &$form_state) {
     '#weight' => -10,
   );
 
-  $form['saml_auth']['saml_link'] = array(
-    '#prefix' => "<p>",
-    '#markup' => l(t("Log in with your SUNet ID »"), "saml_login"),
-    '#suffix' => "</p>",
-  );
+  // @FIXME
+// l() expects a Url object, created from a route name or external URI.
+// $form['saml_auth']['saml_link'] = array(
+//     '#prefix' => "<p>",
+//     '#markup' => l(t("Log in with your SUNet ID »"), "saml_login"),
+//     '#suffix' => "</p>",
+//   );
+
 
   $form['drupal_auth'] = array(
     '#type' => 'fieldset',
