@@ -5,12 +5,6 @@ Maintainer: [jbickar](https://github.com/jbickar)
 
 [Changelog.txt](CHANGELOG.txt)
 
-Sub Modules
----
-
-**[Stanford SAML Block](https://github.com/SU-SWS/anchorage_helper/tree/7.x-1/modules/stanford_saml_block)**
-This module places the saml login block where it should be using context.
-
 
 Installation
 ---

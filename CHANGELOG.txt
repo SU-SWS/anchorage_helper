@@ -1,5 +1,6 @@
 Anchorage Helper x.x-x.x, xxxx-xx-xx
 ------------------------------------
+- Removed stanford saml block module in favor of it being in stanford_ssp
 
 Anchorage Helper 7.x-1.0 2016-04-15
 -----------------------------------
