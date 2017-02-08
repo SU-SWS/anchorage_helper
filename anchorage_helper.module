@@ -1,24 +1,38 @@
 <?php
+
 /**
-* @file
-* Code for the Anchorage Helper module.
-*/
+ * @file
+ * Code for the Anchorage Helper module.
+ */
 
 /**
  * Implements hook_mail_alter().
  */
 function anchorage_helper_mail_alter(&$message) {
+
+  // Debug Mode.
   $debug = variable_get('anchorage_helper_debug', FALSE);
   if ($debug) {
     variable_set('anchorage_helper_pre', $message);
   }
-  $message['headers']['Reply-To'] = $message['from'];
+
+  // Only change the reply to if it hasn't been set. Webforms will set this
+  // value when altering the 'FROM' address in the email config.
+  if (!isset($message['headers']['Reply-To'])) {
+    $message['headers']['Reply-To'] = $message['from'];
+  }
+
+  // Alter all email so that the sender is ours.
   $from = variable_get('anchorage_helper_ses_from', "anchorage-support@lists.stanford.edu");
   $message['from'] = $from;
   $message['headers']['From'] = $from;
   $message['headers']['Sender'] = $from;
   $message['headers']['Return-Path'] = $from;
+  $message['headers']['Errors-To'] = $from;
+
+  // POST Debug mode.
   if ($debug) {
     variable_set('anchorage_helper_post', $message);
   }
+
 }
